@@ -1,0 +1,12 @@
+
+#pasos para ejecutar el script
+
+#descomprimir carpeta con archivos con:
+	unzip terminal_quotes.zip
+
+#ejecutar el script master con :
+	./master.sh
+
+# para agregar mas citas al listado, el archivo se encuentra en 
+	~/terminal_quotes/quotes_list.txt 
+
