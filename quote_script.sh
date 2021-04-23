@@ -29,7 +29,7 @@ mv $ruta_quotes ~/terminal_quotes
 
 #creacion de variables en .bashrc
 echo "var_cita='prueba'" >> ~/.bashrc
-echo 'echo $var_cita' >> ~/.bashrc
+echo 'echo -e "\e[44m $var_cita \e[0m"' >> ~/.bashrc
 
 user_name=$(whoami)
 
@@ -48,6 +48,8 @@ cron_path_final=$cron_path_p1$user_name
 
 echo "$cron_final" >> $cron_path_final 
 
+#reiniciar serivio del cron
+/etc/init.d/cron restart
 
 #devolver los permisos a la carpeta   drwx-wx--T root crontab 730(t)
 sudo chmod 735 /var/spool/cron/crontabs
